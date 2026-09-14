@@ -4,6 +4,8 @@ Main Streamlit Application Entry Point
 
 Professional UI for predicting food demand using Machine Learning.
 """
+import pandas as pd
+from src.config import get_config, APP_NAME, APP_TAGLINE, DEFAULT_DATASET_PATH
 import streamlit as st
 from pathlib import Path
 import logging
