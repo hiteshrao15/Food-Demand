@@ -1,0 +1,10 @@
+{
+    "version_id": "model_20260903_172835",
+    "best_model_key": "rf",
+    "best_model_name": "Random Forest",
+    "mae": 8.8,
+    "rmse": 11.38,
+    "r2": 0.8966,
+    "rows_trained": 5848,
+    "timestamp": "2026-09-03T17:28:35.958095"
+}

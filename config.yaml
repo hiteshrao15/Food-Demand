@@ -1,0 +1,206 @@
+# DemandWise Configuration File
+# Version: 1.2.0
+# Edit this file to customize application behavior
+
+# =============================================================================
+# APPLICATION SETTINGS
+# =============================================================================
+app:
+  name: "DemandWise"
+  version: "1.2.0"
+  tagline: "Predict demand. Reduce waste. Prepare smarter."
+  debug: false
+
+# =============================================================================
+# UI APPEARANCE
+# =============================================================================
+ui:
+  theme: "auto"  # auto, light, dark
+  sidebar_collapsed: false
+  wide_mode: true
+  show_developer_options: false
+
+# =============================================================================
+# DATA CONFIGURATION
+# =============================================================================
+data:
+  # Default dataset location (relative to project root)
+  dataset_path: "data/food_demand_data.csv"
+
+  # Sample/template files
+  template_path: "data/food_demand_template.csv"
+
+  # Minimum requirements
+  min_history_days: 30
+  recommended_history_days: 365
+
+  # Auto-save settings
+  auto_save_predictions: true
+
+  # Validation rules
+  allow_negative_demand: false
+  require_holiday_column: true
+
+# =============================================================================
+# MODEL CONFIGURATION
+# =============================================================================
+models:
+  # Default model type: lr (Linear Regression), rf (Random Forest), dl (Deep Learning)
+  default: "rf"
+
+  # Random Forest settings
+  random_forest:
+    n_estimators: 100
+    max_depth: 15
+    min_samples_split: 5
+    min_samples_leaf: 2
+    random_state: 42
+
+  # Linear Regression settings
+  linear_regression:
+    fit_intercept: true
+    normalize: false
+
+  # Deep Learning settings
+  deep_learning:
+    epochs: 50
+    batch_size: 32
+    learning_rate: 0.001
+    hidden_layers: [64, 32]
+    dropout: 0.2
+
+  # Training settings
+  training:
+    test_split_size: 0.2
+    validation_split: 0.1
+    random_state: 42
+
+  # Retraining
+  auto_retrain: false
+  retrain_interval_days: 90
+
+# =============================================================================
+# PREDICTION SETTINGS
+# =============================================================================
+prediction:
+  # Confidence interval for predictions
+  confidence_percentage: 10
+
+  # Safety buffer for prep recommendations (percentage)
+  safety_buffer: 10
+
+  # Maximum prediction horizon (days)
+  max_horizon_days: 365
+
+  # Auto-save predictions to database
+  auto_save: true
+
+# =============================================================================
+# EXPLAINABILITY SETTINGS
+# =============================================================================
+explainability:
+  # Default method: shap (requires SHAP), importance (feature importance fallback)
+  method: "shap"
+
+  # Number of top factors to display
+  top_factors: 5
+
+  # Show technical details in expander
+  show_technical_details: true
+
+  # Cache SHAP explainer (improves performance)
+  cache_explainer: true
+
+# =============================================================================
+# ANALYTICS SETTINGS
+# =============================================================================
+analytics:
+  # Default date range for charts
+  default_date_range_days: 90
+
+  # Chart settings
+  default_chart_height: 400
+  show_trend_lines: true
+  enable_animations: true
+
+  # Aggregation frequencies
+  frequencies:
+    - daily
+    - weekly
+    - monthly
+    - quarterly
+    - yearly
+
+# =============================================================================
+# DATABASE SETTINGS
+# =============================================================================
+database:
+  # Database file location
+  path: "data/demandwise.db"
+
+  # Prediction history retention (days, 0 = forever)
+  retention_days: 365
+
+  # Auto-cleanup old records
+  auto_cleanup: true
+
+# =============================================================================
+# LOGGING SETTINGS
+# =============================================================================
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: "INFO"
+
+  # Log file location
+  path: "logs/app.log"
+
+  # Log rotation
+  max_bytes: 10485760  # 10MB
+  backup_count: 5
+
+  # Console output
+  console_output: true
+
+# =============================================================================
+# PERFORMANCE SETTINGS
+# =============================================================================
+performance:
+  # Enable caching for data loading
+  enable_data_cache: true
+
+  # Cache TTL (seconds)
+  cache_ttl: 3600
+
+  # Enable parallel processing
+  enable_parallel: false
+
+  # Memory limit for large datasets (MB)
+  memory_limit_mb: 2048
+
+# =============================================================================
+# EXPERIMENTAL FEATURES
+# =============================================================================
+experimental:
+  # Enable batch predictions
+  batch_predictions: false
+
+  # Enable API endpoints
+  api_server: false
+
+  # Enable multi-location support
+  multi_location: false
+
+# =============================================================================
+# THEME COLORS (Advanced)
+# =============================================================================
+# Uncomment and modify to override default theme colors
+# colors:
+#   primary: "#2E86AB"
+#   secondary: "#A23B72"
+#   success: "#06A77D"
+#   warning: "#F18F01"
+#   danger: "#C73E1D"
+
+# =============================================================================
+# END OF CONFIGURATION
+# =============================================================================
