@@ -9,9 +9,6 @@ from src.config import get_config, APP_NAME, APP_TAGLINE, DEFAULT_DATASET_PATH
 import streamlit as st
 from pathlib import Path
 import logging
-
-# Import application modules
-from src.config import get_config, APP_NAME, APP_TAGLINE
 from src.data.loader import DataLoader
 from src.ml.predictor import DemandPredictor
 from src.analytics.engine import AnalyticsEngine
