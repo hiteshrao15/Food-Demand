@@ -16,7 +16,7 @@ from src.database.db import DatabaseManager
 from src.utils.logger import get_logger, setup_logging
 from src.ui.components import (
     render_header, render_kpi_card, render_card, render_footer,
-    render_status_badge, render_upload_box
+    render_status_badge
 )
 from src.ui.feedback import show_empty_state, show_error_state, show_success_state
 from src.styles.theme import get_custom_css

@@ -16,7 +16,7 @@ from src.utils.logger import get_logger
 from src.styles.theme import get_custom_css
 from src.ui.components import (
     render_header, render_card, render_kpi_card, render_footer,
-    render_status_badge, render_upload_box, render_confirmation_dialog
+    render_status_badge
 )
 from src.ui.feedback import show_empty_state, show_error_state, show_success_state, show_warning_state
 
