@@ -7,7 +7,11 @@ PyYAML>=6.0
 joblib>=1.4.0
 matplotlib>=3.8.0
 seaborn>=0.13.0
-# Optional: enable richer explainability and deep-learning models.
-# The app degrades gracefully when these are not installed.
+# Optional: enable richer explainability. The app gracefully falls back to
+# built-in feature importance when SHAP is unavailable.
 shap>=0.45.0
-tensorflow>=2.16.0
+# TensorFlow is deliberately not a deployment dependency: Streamlit Cloud
+# currently uses Python 3.14, for which TensorFlow publishes no compatible
+# wheel. The deep-learning option uses the built-in NumPy implementation when
+# TensorFlow is absent. Install the optional ``tensorflow`` extra locally if
+# you specifically need the Keras implementation.
