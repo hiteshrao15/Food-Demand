@@ -1,0 +1,4 @@
+Model,MAE,MSE,RMSE,R²
+Random Forest,8.8,129.53,11.38,0.8966
+Linear Regression,9.88,166.79,12.91,0.8668
+Deep Learning,10.19,172.46,13.13,0.8623
