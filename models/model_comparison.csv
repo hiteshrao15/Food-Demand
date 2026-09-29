@@ -1,4 +1,5 @@
-Model,MAE,MSE,RMSE,R²
-Random Forest,8.8,129.53,11.38,0.8966
-Linear Regression,9.88,166.79,12.91,0.8668
-Deep Learning,10.19,172.46,13.13,0.8623
+Model,Model_Key,MAE,MSE,RMSE,R2,MAPE
+Random Forest,rf,9.8524,160.6007,12.6728,0.886355,0.11
+Deep Learning,dl,10.3142,182.1762,13.4973,0.871088,0.12
+Linear Regression,lr,10.6435,197.4655,14.0522,0.860269,0.12
+Moving Average (7-day),baseline,22.727,898.4688,29.9745,0.364221,0.25

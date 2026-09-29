@@ -1,33 +1,51 @@
-# Python
+# Python bytecode and caches
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
 .Python
-env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
 venv/
+env/
 ENV/
-env.bak/
-venv.bak/
 
-# SQLite Database
+# Local secrets and environment settings
+.env
+.env.*
+!.env.example
+
+# Runtime databases and logs
 *.db
+*.sqlite
 *.sqlite3
-
-# Logs
 logs/
 *.log
 
-# OS generated files
-.DS_Store
-Thumbs.db
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
 
-# IDEs
+# Test and coverage output
+.coverage
+.coverage.*
+htmlcov/
+
+# IDE and OS files
 .idea/
 .vscode/
 *.swp
 *.swo
+.DS_Store
+Thumbs.db
 
-# Temporary files
-/tmp/
+# Temporary and generated output
+.tmp/
+tmp/
+temp/
 outputs/

@@ -1,10 +1,60 @@
 {
-    "version_id": "model_20260903_172835",
-    "best_model_key": "rf",
-    "best_model_name": "Random Forest",
-    "mae": 8.8,
-    "rmse": 11.38,
-    "r2": 0.8966,
-    "rows_trained": 5848,
-    "timestamp": "2026-09-03T17:28:35.958095"
+  "best_model_name": "Random Forest",
+  "best_model_key": "rf",
+  "metrics": {
+    "mae": 9.8524,
+    "mse": 160.6007,
+    "rmse": 12.6728,
+    "r2": 0.886355,
+    "mape": 0.11,
+    "model_name": "Random Forest"
+  },
+  "baseline_metrics": {
+    "mae": 22.727,
+    "mse": 898.4688,
+    "rmse": 29.9745,
+    "r2": 0.364221,
+    "mape": 0.25,
+    "model_name": "Moving Average (7-day)"
+  },
+  "timestamp": "2026-09-29T19:44:22.989844",
+  "rows_trained": 4678,
+  "rows_validated": 1170,
+  "feature_count": 15,
+  "feature_columns": [
+    "food_item_encoded",
+    "year",
+    "month",
+    "day",
+    "day_of_week",
+    "is_weekend",
+    "quarter",
+    "week_of_year",
+    "holiday",
+    "demand_lag_7",
+    "demand_lag_30",
+    "demand_rolling_mean_7",
+    "demand_rolling_mean_30",
+    "demand_rolling_std_7",
+    "demand_rolling_std_30"
+  ],
+  "version_id": "v_20260929_194422",
+  "split_method": "chronological",
+  "train_period": {
+    "start": "2024-01-01 00:00:00",
+    "end": "2025-08-07 00:00:00"
+  },
+  "test_period": {
+    "start": "2025-08-07 00:00:00",
+    "end": "2025-12-31 00:00:00"
+  },
+  "artifact_checksums": {
+    "best_model.pkl": "1e386db43bfbc20f",
+    "scaler.pkl": "9986e07e174c4fac",
+    "label_encoder.pkl": "4f0d15ac72d7ef70"
+  },
+  "library_versions": {
+    "pandas": "3.0.5",
+    "numpy": "2.4.6"
+  }
 }

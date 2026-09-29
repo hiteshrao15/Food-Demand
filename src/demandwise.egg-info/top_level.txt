@@ -1,8 +1,0 @@
-analytics
-data
-database
-ml
-styles
-ui
-utils
-xai

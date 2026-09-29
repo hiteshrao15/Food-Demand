@@ -4,6 +4,13 @@
 
 A professional Machine Learning-powered web application for predicting food demand in restaurants, cafés, canteens, and food service operations.
 
+## Documentation
+
+- [Install and run the app](docs/INSTALLATION_GUIDE.md)
+- [User guide](docs/USER_GUIDE.md)
+- [Deployment and development](docs/DEPLOYMENT_GUIDE.md)
+- [Design system](docs/DESIGN_SYSTEM.md) · [Component reference](docs/COMPONENT_REFERENCE.md)
+
 ---
 
 ## Overview
@@ -75,7 +82,8 @@ food-demand-prediction/
 ├── app.py                    # Main Streamlit application
 ├── train_models.py           # Model training script
 ├── requirements.txt          # Python dependencies
-├── README.md                 # Documentation
+├── README.md                 # Project overview and quick start
+├── docs/                     # User, setup, deployment, and design guides
 │
 ├── data/                     # Data storage
 │   └── food_demand_data.csv  # Historical demand data
